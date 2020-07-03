@@ -1,15 +1,15 @@
 <h2>Add new post</h2>
 <%= form_for :post, url: posts_path do |f| %>
     <p>
-        Name<br>
-        <%= f.text_field :title %>
+        Название<br>
+        <%= f.text_field(:title, {:class => 'form-control'}) %>
     </p>
     <p>
-        Post body<br>
-        <%= f.text_area :body %>
+        Статья<br>
+        <%= f.text_area(:body, {:class => 'form-control'}) %>
     </p>
     <p>
-        <%= f.submit :body %>
+        <%= f.submit({:class => 'btn btn-success'}) %>
     </p>
         
     <!-- form_for @object, html: { multipart: true }, do |f| -->
