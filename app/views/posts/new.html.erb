@@ -1,4 +1,4 @@
-<h2>Add new post</h2>
+<h2>Создать новую статью</h2>
 <%= form_for :post, url: posts_path do |f| %>
     <% if @post.errors.any? %>
       <% @post.errors.full_messages.each do |msg| %>
