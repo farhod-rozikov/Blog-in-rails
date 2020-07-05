@@ -1,9 +1,11 @@
 <h1>Все статьи</h1>
 <% @post.each do |post| %>
-  <div class ="alert alert-light"> 
+  <div class ="alert alert-light">
     <h3><strong><%= post.title %></strong></h3>
+    <h5><%= post.user.email %></h5>
     <p><%= post.body %></p>
+
     <%= link_to "Подробнее", post_path(post), :class => "btn btn-outline-primary btn-sm" %>
   </div>
-  
+
 <% end %>
